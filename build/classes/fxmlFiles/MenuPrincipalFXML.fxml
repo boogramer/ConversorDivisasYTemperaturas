@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="menuPrincipal_SPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPrincipalFXMLController">
+   <children>
+      <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="bienvenido_tab" text="Bienvenido">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab fx:id="convDiv_tab" text="Conversor de Divisas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="monedaOr_cb" layoutX="21.0" layoutY="61.0" prefHeight="25.0" prefWidth="238.0" />
+                        <TextField fx:id="monedaOr_tf" alignment="CENTER" layoutX="21.0" layoutY="108.0" prefHeight="173.0" prefWidth="237.0">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </TextField>
+                        <ChoiceBox fx:id="monedaDes_cb" layoutX="348.0" layoutY="61.0" prefHeight="25.0" prefWidth="238.0" />
+                        <TextField fx:id="monedaDes_tf" alignment="CENTER" editable="false" layoutX="348.0" layoutY="108.0" prefHeight="173.0" prefWidth="237.0">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="136.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione la moneda que desea convertir" textAlignment="CENTER" wrappingWidth="327.13671875">
+                           <font>
+                              <Font name="Consolas Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="intercambiar_lab" alignment="CENTER" layoutX="270.0" layoutY="150.0" prefHeight="57.0" prefWidth="64.0">
+                           <graphic>
+                              <ImageView fx:id="arrows_img" fitHeight="52.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/arrows.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Intercambiar" />
+                           </tooltip>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="convTemp_tab" text="Conversor de Temperaturas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>
